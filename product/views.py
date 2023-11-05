@@ -8,18 +8,28 @@ from django.contrib.auth import login
 from django.contrib.auth.views import LoginView
 
 def online_shop(request):
+    """
+    Fetches a list of products from a database and generates it on the online shop webpage.
+    """
     products = Product.objects.all()  # Fetch a list of products from your database
     return render(request, 'online_shop/online_shop.html', {'products': products})
 
+
+
 class ProductDetailView(DetailView):
+    """
+    Displays a more detailed view of the product in a seperate webpage
+    """
     model = Product
     template_name = 'online_shop/product_detail.html'
     context_object_name = 'product'
-
-
+  
 
 
 def your_signup_view(request):
+    """
+    Handles user registration
+    """
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
