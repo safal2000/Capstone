@@ -74,6 +74,17 @@
 <div class="viewcode-block" id="Product">
 <a class="viewcode-back" href="../../product.html#product.models.Product">[docs]</a>
 <span class="k">class</span> <span class="nc">Product</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This product model is the model used for the app, it defines the content rules of the app.</span>
+
+<span class="sd">    Rules:</span>
+<span class="sd">        Certain rules that the product model applies is the max length of the title of a product</span>
+<span class="sd">        being 200 characters.</span>
+
+<span class="sd">        The price of the product having a max digit of 10 with 2 decimal paces/</span>
+
+<span class="sd">        Only being able to show positive integers for the quantity of a product</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
     <span class="n">description</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
     <span class="n">price</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DecimalField</span><span class="p">(</span><span class="n">max_digits</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">decimal_places</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>

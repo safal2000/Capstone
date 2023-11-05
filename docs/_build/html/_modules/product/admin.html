@@ -75,11 +75,10 @@
 <span class="c1"># Register your models here.</span>
 <div class="viewcode-block" id="ProductAdmin">
 <a class="viewcode-back" href="../../product.html#product.admin.ProductAdmin">[docs]</a>
-<span class="nd">@admin</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Product</span><span class="p">)</span>
+<span class="nd">@admin</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Product</span><span class="p">)</span>   
 <span class="k">class</span> <span class="nc">ProductAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This class is used to allow for the admin to edit certain aspects of the product information such as</span>
-<span class="sd">    the title, the price and the quantity of a product.</span>
+<span class="sd">    This class is used to allow the admin to edit certain aspects of the product information such as the title, the price, and the quantity of a product.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="s1">&#39;quantity&#39;</span><span class="p">)</span></div>
 

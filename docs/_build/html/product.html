@@ -114,9 +114,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="product.admin.ProductAdmin">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">product.admin.</span></span><span class="sig-name descname"><span class="pre">ProductAdmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_site</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/product/admin.html#ProductAdmin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#product.admin.ProductAdmin" title="Link to this definition"></a></dt>
-<dd><p>This class is used to allow for the admin to edit certain aspects of the product information such as
-the title, the price and the quantity of a product.</p>
-<p>This class is used to allow the admin to edit certain aspects of the product information such as the title, the price, and the quantity of a product.</p>
+<dd><p>This class is used to allow the admin to edit certain aspects of the product information such as the title, the price, and the quantity of a product.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>list_display</strong> – A tuple specifying the fields to display in the admin list view. By default, it includes ‘title’, ‘price’, and ‘quantity’.</p>
@@ -131,7 +129,6 @@ the title, the price and the quantity of a product.</p>
 <dt class="sig sig-object py" id="product.apps.ProductConfig">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">product.apps.</span></span><span class="sig-name descname"><span class="pre">ProductConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/product/apps.html#ProductConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#product.apps.ProductConfig" title="Link to this definition"></a></dt>
 <dd><p>This class allows certain configurations for the primary app in the Django project, the product app.</p>
-<p>This class allows certain configurations for the primary app in the Django project, the product app.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -147,8 +144,16 @@ the title, the price and the quantity of a product.</p>
 <h2>product.models module<a class="headerlink" href="#product-models-module" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="product.models.Product">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">product.models.</span></span><span class="sig-name descname"><span class="pre">Product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">price</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/product/models.html#Product"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#product.models.Product" title="Link to this definition"></a></dt>
-<dd><p>This class represents a product in the e-commerce application.</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">product.models.</span></span><span class="sig-name descname"><span class="pre">Product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/product/models.html#Product"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#product.models.Product" title="Link to this definition"></a></dt>
+<dd><p>This product model is the model used for the app, it defines the content rules of the app.</p>
+<dl>
+<dt>Rules:</dt><dd><p>Certain rules that the product model applies is the max length of the title of a product
+being 200 characters.</p>
+<p>The price of the product having a max digit of 10 with 2 decimal paces/</p>
+<p>Only being able to show positive integers for the quantity of a product</p>
+</dd>
+</dl>
+<p>This class represents a product in the e-commerce application.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -189,7 +194,8 @@ the title, the price and the quantity of a product.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="product.views.ProductDetailView">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">product.views.</span></span><span class="sig-name descname"><span class="pre">ProductDetailView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/product/views.html#ProductDetailView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#product.views.ProductDetailView" title="Link to this definition"></a></dt>
-<dd><p>Displays a more detailed view of the product in a separate webpage.</p>
+<dd><p>Displays a more detailed view of the product in a seperate webpage</p>
+<p>Displays a more detailed view of the product in a separate webpage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -211,12 +217,14 @@ the title, the price and the quantity of a product.</p>
 <dt class="sig sig-object py" id="product.views.online_shop">
 <span class="sig-prename descclassname"><span class="pre">product.views.</span></span><span class="sig-name descname"><span class="pre">online_shop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/product/views.html#online_shop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#product.views.online_shop" title="Link to this definition"></a></dt>
 <dd><p>Fetches a list of products from a database and generates it on the online shop webpage.</p>
+<p>Fetches a list of products from a database and generates it on the online shop webpage.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="product.views.your_signup_view">
 <span class="sig-prename descclassname"><span class="pre">product.views.</span></span><span class="sig-name descname"><span class="pre">your_signup_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/product/views.html#your_signup_view"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#product.views.your_signup_view" title="Link to this definition"></a></dt>
 <dd><p>Handles user registration</p>
+<p>Handles user registration</p>
 </dd></dl>
 
 </section>

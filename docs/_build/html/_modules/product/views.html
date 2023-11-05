@@ -81,7 +81,9 @@
 <div class="viewcode-block" id="online_shop">
 <a class="viewcode-back" href="../../product.html#product.views.online_shop">[docs]</a>
 <span class="k">def</span> <span class="nf">online_shop</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
-  
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Fetches a list of products from a database and generates it on the online shop webpage.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">products</span> <span class="o">=</span> <span class="n">Product</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>  <span class="c1"># Fetch a list of products from your database</span>
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;online_shop/online_shop.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;products&#39;</span><span class="p">:</span> <span class="n">products</span><span class="p">})</span></div>
 
@@ -91,7 +93,9 @@
 <div class="viewcode-block" id="ProductDetailView">
 <a class="viewcode-back" href="../../product.html#product.views.ProductDetailView">[docs]</a>
 <span class="k">class</span> <span class="nc">ProductDetailView</span><span class="p">(</span><span class="n">DetailView</span><span class="p">):</span>
- 
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Displays a more detailed view of the product in a seperate webpage</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">model</span> <span class="o">=</span> <span class="n">Product</span>
     <span class="n">template_name</span> <span class="o">=</span> <span class="s1">&#39;online_shop/product_detail.html&#39;</span>
     <span class="n">context_object_name</span> <span class="o">=</span> <span class="s1">&#39;product&#39;</span></div>
@@ -102,7 +106,9 @@
 <div class="viewcode-block" id="your_signup_view">
 <a class="viewcode-back" href="../../product.html#product.views.your_signup_view">[docs]</a>
 <span class="k">def</span> <span class="nf">your_signup_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
- 
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles user registration</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
         <span class="n">form</span> <span class="o">=</span> <span class="n">UserCreationForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>

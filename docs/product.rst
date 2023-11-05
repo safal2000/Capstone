@@ -13,7 +13,6 @@ product.admin module
 .. autoclass:: product.admin.ProductAdmin
    :members:
 
-   This class is used to allow the admin to edit certain aspects of the product information such as the title, the price, and the quantity of a product.
 
    :ivar list_display: A tuple specifying the fields to display in the admin list view. By default, it includes 'title', 'price', and 'quantity'.
 
@@ -23,7 +22,6 @@ product.apps module
 .. autoclass:: product.apps.ProductConfig
    :members:
 
-   This class allows certain configurations for the primary app in the Django project, the product app.
 
    :ivar default_auto_field: The default database field for AutoField, set to 'django.db.models.BigAutoField'.
    :ivar name: The name of the app, which is 'product'.
